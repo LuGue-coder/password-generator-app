@@ -33,6 +33,12 @@ html, body {
 }
 .maincontainer{
   background-color: var(--Grey-800);  
+  display: flex;
+  flex-direction:column;
+  max-height: 100vh;
+  padding:1rem;
+  min-width:25rem;
+  height:25rem;
 }
 
 .app_title{
@@ -40,33 +46,101 @@ html, body {
   justify-content: center;
   align-items: center;
   color:var(--Grey-600);
-  font-size: 24px;
+  font-size: 18px;
+  margin:2rem;
 }
 
 .password_window{
   background-color: var(--Grey-800);
   display:flex;
   justify-content:space-between;
+  align-items: center;
+  padding:0rem 1rem;
+  margin-bottom: 1rem;
 }
+
 .password_content{
-  font-size: 32px;
+  font-size: 24px;
+}
+
+label{
+  display:block;
+  padding:1rem;
 }
 
 
-.password_copy{
-  width:5%;
-  height: 5%;}
+input[type=range] {
+    width:25rem;
+}
+
+#character_length_range{
+border:none;
+outline:none;
+background-color: black;
+}
+
+#character_length_range::-webkit-slider-runnable-track {
+  background-color: var(--Grey-850);
+
+}
+#character_length_range::-moz-progress-bar {
+  background-color: var(--Green-200);
+}
 
 
 ul{
 list-style: none;
+text-align: left;
+padding:0;
+font-size: 16px;
+}
+li{
+  margin:0.5rem;
+}
+
+.list_point input{
+  display:none;
+}
+
+.list_point span{
+  height: 1rem;
+  width: 1rem;
+  border: 1.5px solid whitesmoke;
+  display: inline-block;
+  position: relative;
+}
+
+.list_point input:checked ~ .checkmark {
+  background-color:var(--Green-200);
+  border: 1.5px solid var(--Green-200)
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.list_point input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.list_point .checkmark:after {
+  left:5px;
+  top:px;
+  width: 5px;
+  height: 10px;
+  border: 1.5px solid var(--Grey-800);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .window_down{
   display:flex;
   align-items: center;
   justify-content: center;
-  margin:2rem;
+  padding:1rem;
 }
 
 .window_down_btn{
@@ -75,12 +149,15 @@ list-style: none;
     color:var(--Grey-800);
     padding:0.5rem 4rem;
     border-radius: 1px;
+    cursor:pointer;
 }
 .password_strength_title{
   color:var(--Grey-600);
 }
 .password_strength{
   display:grid;
-  grid-template-columns: 50% 25% 25%;
+  grid-template-columns: 60% 25% 25%;
   background-color: var(--Grey-800);
+  background-color: var(--Grey-850);
+  padding: 0.25rem 0.5rem;
 }
