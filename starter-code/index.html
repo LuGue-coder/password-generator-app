@@ -3,27 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+   <script  defer src="script.js"></script>
   <title>Frontend Mentor | Password generator app</title>
 </head>
 <body>
+<main>
+   
+   <article>
+      <div class="app_title">Password Generator</div>
+   </article>
 
-  Password Generator
+   <article>
 
-  P4$5W0rD!
+          <div class="password_window">
+            <p class="password_content">P4$5WOrD!</p>
+            <img class="password_copy" src="assets/images/icon-copy.svg"></img>
+          </div>
 
-  Character Length
+    
+  </article>
 
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
+  <article>
+  <div class="maincontainer">
 
-  Strength
+   
+        <form>
+          <div class="character_length">
+          <label for="">Character length</label>
+              <input id="character_length_range"type="range" min="1" max="20" value="10"></input>
+              <input id="character_length_number" type="number" min="1"max="20" value="10"></input>
+          </div>
+ 
 
-  Generate
+     
+          <ul>
+            <li><input type="checkbox">Include Uppercase Letters</li>
+            <li><input type="checkbox">Include Lowercase Letters</li>
+            <li><input type="checkbox"> Include Numbers</li>
+            <li><input type="checkbox"> Include Symbols</li>
+          </ul>
+    
+    
+          <div class="password_strength">
+              <p class="password_strength_title">STRENGTH</p>
+              <p class="password_strength_solution">TOO WEAK</p>
+              <img class="password_strength__symbol" src="assets/images/icons_password_strength /WEAK.png">
+          </div>
+       
+    
+
+  
+          <div class="window_down">
+            <button class="window_down_btn" type="submit">GENERATE <img src="assets/images/icon-arrow-right.svg"></button>
+            <img src="">
+          </div>  
+       </form>
+          
+  </div>
+   </article>
+  </main>
+  
 
 </body>
 </html>

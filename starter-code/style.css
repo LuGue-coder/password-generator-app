@@ -1,0 +1,86 @@
+
+:root{
+/*GREYS*/
+--Grey-950: hsl(255, 22%, 4%);
+--Grey-900: hsl(248, 17%, 9%);
+--Grey-850: hsl(248, 15%, 11%);
+--Grey-800: hsl(248, 10%, 15%);
+--Grey-700: hsl(248, 5%, 34%);
+--Grey-600: hsl(251, 9%, 53%);
+--Grey-200: hsl(252, 11%, 91%);
+
+/*OTHER COLORS*/
+--Green-200: hsl(127, 100%, 82%);
+--Yellow-300: hsl(42, 91%, 68%);
+--Orange-400: hsl(13, 95%, 66%);
+--Red-500: hsl(0, 91%, 63%);
+}
+
+@font-face {
+  font-family: JetBrains Mono;
+  src: url(assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf);
+}
+
+html, body {
+    font-family:"Space mono", monospace;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background-color:black;
+    color:whitesmoke;
+}
+.maincontainer{
+  background-color: var(--Grey-800);  
+}
+
+.app_title{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:var(--Grey-600);
+  font-size: 24px;
+}
+
+.password_window{
+  background-color: var(--Grey-800);
+  display:flex;
+  justify-content:space-between;
+}
+.password_content{
+  font-size: 32px;
+}
+
+
+.password_copy{
+  width:5%;
+  height: 5%;}
+
+
+ul{
+list-style: none;
+}
+
+.window_down{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin:2rem;
+}
+
+.window_down_btn{
+    background-color:var(--Green-200);
+    border: none;
+    color:var(--Grey-800);
+    padding:0.5rem 4rem;
+    border-radius: 1px;
+}
+.password_strength_title{
+  color:var(--Grey-600);
+}
+.password_strength{
+  display:grid;
+  grid-template-columns: 50% 25% 25%;
+  background-color: var(--Grey-800);
+}
