@@ -37,7 +37,7 @@ html, body {
   flex-direction:column;
   max-height: 100vh;
   padding:1rem;
-  min-width:25rem;
+  width:25rem;
   height:25rem;
 }
 
@@ -63,28 +63,38 @@ html, body {
   font-size: 24px;
 }
 
-label{
-  display:block;
-  padding:1rem;
+.character_length{
+  padding:0.5rem 0.5rem;
+  font-size: 14px;
 }
 
-
-input[type=range] {
-    width:25rem;
+li{
+  padding-top:0.5rem;
+  padding-left: 1rem;
 }
 
+input[type=number]{
+  background-color:var(--Grey-800);
+  color:var(--Green-200);
+  border:none;
+  font-family: JetBrains Mono;
+  font-size: 20px;
+  position:;
+
+}
 #character_length_range{
 border:none;
 outline:none;
-background-color: black;
+margin: 1rem 0.25rem;
+width:23rem;
+appearance: none;
 }
 
-#character_length_range::-webkit-slider-runnable-track {
-  background-color: var(--Grey-850);
-
+#character_length_range::-webkit-slider-runnable-track{
+  background-color:var(--Grey-850);
 }
-#character_length_range::-moz-progress-bar {
-  background-color: var(--Green-200);
+#character_length_range::-webkit-slider-thumb{
+color:var(--Green-200); 
 }
 
 
@@ -92,14 +102,15 @@ ul{
 list-style: none;
 text-align: left;
 padding:0;
-font-size: 16px;
-}
-li{
-  margin:0.5rem;
+font-size: 14px;
 }
 
 .list_point input{
   display:none;
+}
+
+li{
+  margin-left:1.5rem;
 }
 
 .list_point span{
@@ -108,6 +119,7 @@ li{
   border: 1.5px solid whitesmoke;
   display: inline-block;
   position: relative;
+  right:2rem;
 }
 
 .list_point input:checked ~ .checkmark {
@@ -126,7 +138,7 @@ li{
 
 .list_point .checkmark:after {
   left:5px;
-  top:px;
+  top:0px;
   width: 5px;
   height: 10px;
   border: 1.5px solid var(--Grey-800);
@@ -150,6 +162,7 @@ li{
     padding:0.5rem 4rem;
     border-radius: 1px;
     cursor:pointer;
+    font-weight: 600;
 }
 .password_strength_title{
   color:var(--Grey-600);
