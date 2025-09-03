@@ -38,7 +38,7 @@ html, body {
   max-height: 100vh;
   padding:1rem;
   width:25rem;
-  height:25rem;
+  height:27rem;
 }
 
 .app_title{
@@ -64,7 +64,7 @@ html, body {
 }
 
 .character_length{
-  padding:0.5rem 0.5rem;
+  padding:0rem 0.5rem 0rem 0rem ;
   font-size: 14px;
 }
 
@@ -78,30 +78,48 @@ input[type=number]{
   color:var(--Green-200);
   border:none;
   font-family: JetBrains Mono;
-  font-size: 20px;
-  position:;
+  font-size: 24px;
+  position:relative;
+  left:21rem;
+  bottom: 4rem;
 
 }
 #character_length_range{
+-webkit-appearance: none;
 border:none;
 outline:none;
-margin: 1rem 0.25rem;
-width:23rem;
-appearance: none;
+margin: 2rem 0.25rem 0rem 0.25rem;
+background: linear-gradient(90deg, hsl(248, 15%, 11%) 60%, hsl(248, 15%, 11%) 60%);
+height:0.5rem;
+width:24rem;
+opacity:0.9;
+-webkit-transition: 2s;
+padding:0rem;
 }
 
-#character_length_range::-webkit-slider-runnable-track{
-  background-color:var(--Grey-850);
-}
 #character_length_range::-webkit-slider-thumb{
-color:var(--Green-200); 
+-webkit-appearence:none;
+appearance:none;
+width:30px;
+height:30px;
+border-radius: 50%;
+background-color: aliceblue;
+cursor: pointer;
 }
 
+#character_length_range::-webkit-slider-thumb:hover{
+  background-color: var(--Grey-850);
+  border: 1px solid var(--Green-200)
+}
+
+.list{
+  padding:0rem 0rem 1rem 0rem;
+}
 
 ul{
 list-style: none;
 text-align: left;
-padding:0;
+padding:0rem;
 font-size: 14px;
 }
 
@@ -159,18 +177,36 @@ li{
     background-color:var(--Green-200);
     border: none;
     color:var(--Grey-800);
-    padding:0.5rem 4rem;
+    margin-top:1rem;
     border-radius: 1px;
-    cursor:pointer;
     font-weight: 600;
+    min-height:3rem;
+    min-width: 22rem;}
+
+.window_down_btn:hover{
+  background-color: var(--Grey-850);
+  border: 2px solid var(--Green-200);
+  color: var(--Green-200);
+  cursor: pointer;
 }
 .password_strength_title{
   color:var(--Grey-600);
 }
 .password_strength{
-  display:grid;
-  grid-template-columns: 60% 25% 25%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--Grey-800);
   background-color: var(--Grey-850);
   padding: 0.25rem 0.5rem;
+}
+
+
+.password_copy{
+  cursor: pointer;
+}
+
+.password_strength__symbol{
+  position:reative;
+  right:1rem;
 }
